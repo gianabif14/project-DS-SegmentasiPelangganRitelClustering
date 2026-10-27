@@ -1,6 +1,5 @@
 # Segmentasi Profil dan Perilaku Pelanggan Ritel Berdasarkan Pendapatan dan Riwayat Transaksi Belanja menggunakan metode clustering
-## Kelompok 2
-## Kata gian sama ito mau diet
+## Kelompok 2 : Kata gian sama ito mau diet
 
 ### Nama Anggota Kelompok 
 - Grahito Ardianto Purnomo (123240001)
