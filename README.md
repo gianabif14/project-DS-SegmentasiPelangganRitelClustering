@@ -7,13 +7,14 @@
 
 Proyek akhir ini bertujuan untuk menganalisis dan mengelompokkan pelanggan ritel (*customer segmentation*) berdasarkan profil demografis, tingkat pendapatan (*Income*), serta pola dan riwayat transaksi belanja di berbagai kanal penjualan maupun kategori produk.
 
-Dengan menggunakan pendekatan **Clustering** (*unsupervised learning*), proyek ini disusun melalui alur kerja *Data Science* yang meliputi:
-- **Business Understanding**: Perumusan masalah segmentasi pelanggan, tujuan analisis, serta pemilihan metode dan metrik evaluasi klaster (seperti *Silhouette Score* / *Inertia*).
-- **Data Gathering**: Pemuatan serta pemahaman struktur dan deskripsi setiap atribut pada dataset pelanggan ritel.
-- **Exploratory Data Analysis (EDA)**: Eksplorasi statistik deskriptif dan visualisasi distribusi demografi, pendapatan, serta pengeluaran produk.
-- **Data Cleaning & Preprocessing**: Penanganan *missing values* (seperti pada kolom `Income`), pengecekan duplikat dan *outlier*, transformasi fitur, penskalaan data (*feature scaling*), serta *feature selection*.
-- **Modelling**: Penerapan algoritma *clustering* sesuai materi praktikum untuk membentuk segmen pelanggan yang optimal.
-- **Evaluasi & Konklusi**: Evaluasi kualitas klaster yang terbentuk, interpretasi karakteristik masing-masing segmen pelanggan, serta rekomendasi strategi pemasaran yang relevan.
+Dengan menggunakan pendekatan **Clustering** (*unsupervised learning*), proyek ini disusun secara berurutan melalui 7 tahapan utama sesuai panduan proyek akhir:
+- **Tahap A — Business Understanding**: Latar belakang masalah, pertanyaan bisnis, metode *clustering* (K-Means, Agglomerative Hierarchical Clustering, dan DBSCAN), serta metrik evaluasi (Inertia/Elbow, Silhouette Score, Davies-Bouldin Index, Calinski-Harabasz Index, uji generalisasi Train vs Test, serta validasi eksternal `Response`).
+- **Tahap B — Data Gathering**: Pemuatan data mentah (`marketing_campaign.csv`), sumber dan kredibilitas dataset, alasan pemilihan, serta kamus data 29 kolom dalam 4 dimensi utama.
+- **Tahap C — Exploratory Data Analysis (EDA)**: Statistik deskriptif dan visualisasi data disertai penjelasan temuan di bawah setiap grafik.
+- **Tahap D — Cleaning, Preprocessing, dan Feature Selection**: Audit kualitas data, pembersihan data (komparasi sebelum vs sesudah), rekayasa fitur, seleksi fitur, *log-transform*, *scaling*, *train-test split*, dan PCA.
+- **Tahap E — Modelling**: Pembuatan model utama (**K-Means**) serta model pembanding (**Agglomerative Hierarchical Clustering** dan **DBSCAN**) beserta alasan pada setiap langkah kode.
+- **Tahap F — Evaluasi**: Perbandingan metrik penilaian, grafik pendukung, uji generalisasi (Train vs Test), pemilihan model terbaik, serta *profiling* segmen pelanggan.
+- **Tahap G — Konklusi**: Jawaban atas pertanyaan bisnis, terjemahan metrik ke bahasa bisnis, rekomendasi strategis per segmen, dan keterbatasan proyek.
 
 ---
 
@@ -21,10 +22,10 @@ Dengan menggunakan pendekatan **Clustering** (*unsupervised learning*), proyek i
 
 | No | Nama | NIM | Peran & Kontribusi |
 | :--- | :--- | :--- | :--- |
-| 1 | **Grahito Ardianto Purnomo** | 123240001 |
-| 2 | **Fahri Hidayatullah** | 123240002 |
-| 3 | **Krocasadigandra Arzaq Kubro M.** | 123240015 |
-| 4 | **Gian Abi Firdaus** | 123240017 |
+| 1 | **Grahito Ardianto Purnomo** | 123240001 | |
+| 2 | **Fahri Hidayatullah** | 123240002 | |
+| 3 | **Krocasadigandra Arzaq Kubro M.** | 123240015 | |
+| 4 | **Gian Abi Firdaus** | 123240017 | |
 
 ---
 
@@ -49,7 +50,30 @@ Terdapat pula dua kolom bernilai konstan pada seluruh baris, yaitu `Z_CostContac
 
 ## 4. Struktur Repository
 
-```text
-├── README.md                  # Dokumentasi utama proyek
-├── marketing_campaign.csv     # Dataset pelanggan ritel 
-└── notebook.ipynb             # Jupyter Notebook berisi keseluruhan alur analisis
+- `README.md` — Dokumentasi utama proyek
+- `marketing_campaign.csv` — Dataset pelanggan ritel (delimiter Tab `\t`)
+- `notebook.ipynb` — Jupyter Notebook berisi keseluruhan alur analisis (Tahap A–G)
+
+---
+
+## 5. Panduan Menjalankan Proyek
+
+### Prasyarat
+Pastikan lingkungan **Python 3.10+** (sesuai metadata kernel notebook) telah terpasang beserta pustaka berikut:
+- `numpy`
+- `pandas`
+- `matplotlib`
+- `seaborn`
+- `scipy`
+- `scikit-learn`
+- `jupyter` (atau lingkungan Jupyter / VS Code / Google Colab)
+
+### Langkah-Langkah
+1. **Clone repository** ke komputer lokal:
+   `git clone <url-repository-github-kalian>` lalu masuk ke folder proyek dengan `cd <nama-folder-repository>`.
+2. **Instal dependensi** yang dibutuhkan:
+   Jalankan `pip install numpy pandas matplotlib seaborn scipy scikit-learn jupyter` di terminal atau *command prompt*.
+3. **Pastikan berkas dataset berada satu folder dengan notebook**:
+   Notebook mengacu pada `DATA_PATH = "marketing_campaign.csv"` dan membacanya menggunakan `pd.read_csv(DATA_PATH, sep="\t")` dengan tahun referensi `REF_YEAR = 2014` serta `RANDOM_STATE = 42`.
+4. **Buka dan jalankan notebook**:
+   Jalankan `jupyter notebook` (atau buka langsung melalui VS Code / Google Colab), buka file `.ipynb` utama, lalu jalankan seluruh sel secara berurutan mulai dari **Bagian 0 (Setup Lingkungan & Import Library)** hingga **Tahap G (Konklusi)**.
