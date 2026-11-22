@@ -1,6 +1,9 @@
 # Segmentasi Profil dan Perilaku Pelanggan Ritel Berdasarkan Pendapatan dan Riwayat Transaksi Belanja Menggunakan Metode Clustering
 
 **Kelompok 2 : Kata gian sama ito mau diet**  
+Prodi Informatika — UPN "Veteran" Yogyakarta  
+Praktikum Data Science 2026/2027
+
 ---
 
 ## 1. Ringkasan Proyek
@@ -20,12 +23,14 @@ Dengan menggunakan pendekatan **Clustering** (*unsupervised learning*), proyek i
 
 ## 2. Anggota Kelompok & Kontribusi
 
+Seluruh anggota berpartisipasi bersama dalam **pencarian dan validasi dataset** serta **penyusunan laporan proyek akhir** (penjelasan narasi, analisis temuan, dan kesimpulan), dengan pembagian peran spesifik yang merata sebagai berikut:
+
 | No | Nama | NIM | Peran & Kontribusi |
 | :--- | :--- | :--- | :--- |
-| 1 | **Grahito Ardianto Purnomo** | 123240001 | |
-| 2 | **Fahri Hidayatullah** | 123240002 | |
-| 3 | **Krocasadigandra Arzaq Kubro M.** | 123240015 | |
-| 4 | **Gian Abi Firdaus** | 123240017 | |
+| 1 | **Grahito Ardianto Purnomo** | 123240001 | **Koordinator Business Understanding & Data Gathering + Penyusun PPT Presentasi**: Bersama tim mencari dataset & menyusun laporan proyek akhir; merumuskan masalah bisnis, pertanyaan analisis, kamus data 29 kolom, serta merancang dan menyusun materi PPT presentasi. |
+| 2 | **Fahri Hidayatullah** | 123240002 | **Pengembang Utama Kode Preprocessing & Penyusun `README.md`**: Bersama tim mencari dataset & menyusun laporan proyek akhir; menyusun dan merapikan `README.md` repository, mengelola berkas repository, serta mengembangkan kode tahap EDA, *cleaning*, *preprocessing*, rekayasa fitur, dan seleksi fitur di notebook. |
+| 3 | **Krocasadigandra Arzaq Kubro M.** | 123240015 | **Pengembang Utama Kode Modelling & Evaluasi**: Bersama tim mencari dataset & menyusun laporan proyek akhir; mengembangkan implementasi kode algoritma *clustering* (K-Means, Agglomerative Hierarchical Clustering, dan DBSCAN), evaluasi metrik, uji generalisasi Train vs Test, serta *profiling* segmen. |
+| 4 | **Gian Abi Firdaus** | 123240017 | **Penyusun Narasi Konklusi, Validasi Hasil & Pendukung PPT Presentasi**: Bersama tim mencari dataset & menyusun laporan proyek akhir; merumuskan jawaban pertanyaan bisnis, terjemahan metrik ke bahasa bisnis, rekomendasi per segmen, keterbatasan proyek, serta membantu penyiapan materi PPT presentasi. |
 
 ---
 
