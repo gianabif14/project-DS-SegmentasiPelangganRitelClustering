@@ -1,9 +1,6 @@
 # Segmentasi Profil dan Perilaku Pelanggan Ritel Berdasarkan Pendapatan dan Riwayat Transaksi Belanja Menggunakan Metode Clustering
 
 **Kelompok 2 : Kata gian sama ito mau diet**  
-Prodi Informatika — UPN "Veteran" Yogyakarta  
-Praktikum Data Science 2026/2027
-
 ---
 
 ## 1. Ringkasan Proyek
