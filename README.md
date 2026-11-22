@@ -30,14 +30,20 @@ Dengan menggunakan pendekatan **Clustering** (*unsupervised learning*), proyek i
 
 ## 3. Sumber Data
 
-- **Nama File**: `marketing_campaign.csv`
-- **Sumber Dataset**: Customer Personality Analysis — Kaggle ; yang dapat diakses melalui link berikut : https://www.kaggle.com/datasets/imakash3011/customer-personality-analysis
-- **Dimensi Data**: 2.240 baris dan 29 kolom
-- **Deskripsi Singkat Fitur**:
-  - **Demografi & Profil**: `ID`, `Year_Birth` (tahun lahir), `Education` (tingkat pendidikan), `Marital_Status` (status pernikahan), `Income` (pendapatan tahunan rumah tangga), `Kidhome` (jumlah anak kecil), `Teenhome` (jumlah remaja), `Dt_Customer` (tanggal bergabung menjadi pelanggan), `Recency` (jumlah hari sejak pembelian terakhir), `Complain` (riwayat keluhan dalam 2 tahun terakhir).
-  - **Pengeluaran Produk (2 tahun terakhir)**: `MntWines`, `MntFruits`, `MntMeatProducts`, `MntFishProducts`, `MntSweetProducts`, `MntGoldProds`.
-  - **Perilaku & Kanal Pembelian**: `NumDealsPurchases` (pembelian dengan diskon), `NumWebPurchases` (pembelian via web), `NumCatalogPurchases` (pembelian via katalog), `NumStorePurchases` (pembelian langsung di toko), `NumWebVisitsMonth` (kunjungan web per bulan).
-  - **Respons Kampanye**: `AcceptedCmp1` – `AcceptedCmp5`, `Response`, serta atribut konstanta `Z_CostContact` dan `Z_Revenue`.
+- **Nama dataset**: Customer Personality Analysis
+- **Berkas**: `marketing_campaign.csv` (pemisah kolom tab `\t`, terdiri atas 2.240 baris dan 29 kolom)
+- **Tautan sumber**: [Kaggle - Customer Personality Analysis](https://www.kaggle.com/datasets/imakash3011/customer-personality-analysis) (diunggah oleh `imakash3011`, disediakan oleh Dr. Omar Romero-Hernandez)
+- **Lisensi**: CC0: Public Domain
+- **Periode data**: Pendaftaran pelanggan (`Dt_Customer`) tercatat dari 30 Juli 2012 hingga 29 Juni 2014
+
+Kolom pada dataset terbagi ke dalam empat kelompok atribut utama:
+
+1. **People** (profil dan demografi): `ID`, `Year_Birth`, `Education`, `Marital_Status`, `Income`, `Kidhome`, `Teenhome`, `Dt_Customer`, `Recency`, `Complain`.
+2. **Products** (pengeluaran dua tahun terakhir): `MntWines`, `MntFruits`, `MntMeatProducts`, `MntFishProducts`, `MntSweetProducts`, `MntGoldProds`.
+3. **Promotion** (diskon dan respons kampanye): `NumDealsPurchases`, `AcceptedCmp1`, `AcceptedCmp2`, `AcceptedCmp3`, `AcceptedCmp4`, `AcceptedCmp5`, `Response`.
+4. **Place** (kanal pembelian dan kunjungan situs web): `NumWebPurchases`, `NumCatalogPurchases`, `NumStorePurchases`, `NumWebVisitsMonth`.
+
+Terdapat pula dua kolom bernilai konstan pada seluruh baris, yaitu `Z_CostContact` (3) dan `Z_Revenue` (11), yang tidak digunakan dalam pemodelan. Pemeriksaan awal juga menemukan 24 nilai kosong (1,07%) pada kolom `Income`, 182 baris identik apabila kolom `ID` diabaikan, beberapa nilai anomali (`Year_Birth` 1893, 1899, 1900 serta `Income` 666.666), dan kategori tidak konsisten pada `Marital_Status` (`Alone`, `Absurd`, `YOLO`).
 
 ---
 
